@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "ftp.h": "c",
+        "wifi.h": "c",
+        "nvs_rw.h": "c"
+    }
+}
