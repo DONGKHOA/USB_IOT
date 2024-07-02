@@ -1,8 +1,8 @@
-# Install script for directory: /home/dongkhoa/esp/esp-idf/components/esp_system/port
+# Install script for directory: C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_system/port
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/USB_IOT")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,11 +34,11 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/dongkhoa/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump")
+  set(CMAKE_OBJDUMP "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT/build/esp-idf/esp_system/port/soc/esp32/cmake_install.cmake")
+  include("D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/esp_system/port/soc/esp32s3/cmake_install.cmake")
 endif()
 

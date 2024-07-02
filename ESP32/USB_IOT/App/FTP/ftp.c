@@ -19,6 +19,12 @@
 
 #define FTP_TAG  "[Ftp]"
 
+/***********************************
+ *           DATA
+ ***********************************/
+
+char ftp_user[FTP_USER_PASS_LEN_MAX + 1];
+char ftp_pass[FTP_USER_PASS_LEN_MAX + 1];
 
 /***********************************
  *   PRIVATE DATA
@@ -44,8 +50,6 @@ int ftp_timeout = FTP_CMD_TIMEOUT_MS;
 const char *MOUNT_POINT = "/root";
 
 static uint8_t ftp_stop = 0;
-static char ftp_user[FTP_USER_PASS_LEN_MAX + 1];
-static char ftp_pass[FTP_USER_PASS_LEN_MAX + 1];
 
 /***********************************
  *   PRIVATE FUNCTIONS PROTOTYPE

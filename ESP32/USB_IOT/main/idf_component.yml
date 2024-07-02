@@ -1,6 +1,5 @@
 ## IDF Component Manager Manifest File
 dependencies:
-  espressif/mdns:
-    version: "^1.0.3"
-    rules:
-      - if: "idf_version >=5.0"
+  espressif/esp_tinyusb: "^1.4.2"
+  espressif/mdns: "^1.0.3"
+  idf: "^5.0"

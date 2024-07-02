@@ -7,6 +7,11 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 /*********************
  *      DEFINES
  *********************/
@@ -56,5 +61,9 @@ static inline WIFI_Status_t WIFI_state_connect(void)
 {
     return state_connected_wifi;
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
