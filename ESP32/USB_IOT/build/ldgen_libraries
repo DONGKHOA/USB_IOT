@@ -29,8 +29,8 @@ D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/sdmmc/libsdmmc.a
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/vfs/libvfs.a
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/fatfs/libfatfs.a
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/console/libconsole.a
-D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/libFTP.a
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/SD_Card/libSD_Card.a
+D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/libFTP.a
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/lwip/liblwip.a
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/esp_event/libesp_event.a
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/nvs_flash/libnvs_flash.a

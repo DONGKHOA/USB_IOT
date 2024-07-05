@@ -5,6 +5,9 @@
 cmake_minimum_required(VERSION 3.16)
 
 # "Trim" the build. Include the minimal set of components, main, and anything it depends on.
+
+set(EXTRA_COMPONENT_DIRS ${CMAKE_CURRENT_LIST_DIR}/App ${CMAKE_CURRENT_LIST_DIR}/Drivers)
+
 set(COMPONENTS main)
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(USB_MSC)

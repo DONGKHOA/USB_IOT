@@ -1,0 +1,27 @@
+dependencies:
+  espressif/esp_tinyusb:
+    component_hash: 43d73c626724054db083ad2a537e8af223e3bca7a915fc38a9d9c6c7f2920a69
+    source:
+      storage_url: file:///C:/Espressif/registry
+      type: service
+    version: 1.4.3
+  espressif/mdns:
+    component_hash: d8ae7aa491ff97aea1d00d514a1de42cdbaaf1bce10df183968fa5594b904de7
+    source:
+      storage_url: file:///C:/Espressif/registry
+      type: service
+    version: 1.2.5
+  espressif/tinyusb:
+    component_hash: a01cfb210e3bca8f046ca55b3aeb6b4329c22345ca2479e29d1ce7dc267abe65
+    source:
+      storage_url: file:///C:/Espressif/registry
+      type: service
+    version: 0.15.0~5
+  idf:
+    component_hash: null
+    source:
+      type: idf
+    version: 5.2.1
+manifest_hash: 6ddea2f0e71ee1276775d7f6783503bf36cb4ba6095c336ed6ad5b024d3f5b8a
+target: esp32s3
+version: 1.0.0

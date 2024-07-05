@@ -41,10 +41,12 @@
 #endif
 
 static const char *TAG = "MAIN";
-static char *MOUNT_POINT = "/root";
+static char *MOUNT_POINT = "/data";
 
 EventGroupHandle_t xEventTask;
 int FTP_TASK_FINISH_BIT = BIT2;
+
+#define CONFIG_MMC_SDCARD 1
 
 #if CONFIG_ST_MODE
 /* FreeRTOS event group to signal when we are connected*/
@@ -58,12 +60,6 @@ static EventGroupHandle_t s_wifi_event_group;
 
 static int s_retry_num = 0;
 #endif
-
-//for test
-//#define CONFIG_FLASH	1
-#define CONFIG_SPI_SDCARD  1
-#define CONFIG_ST_MODE 1
-//#define CONFIG_MMC_SDCARD  1
 
 
 static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data)

@@ -6128,10 +6128,7 @@
                         "help": "GPIO number (IOxx) to SPI MOSI.",
                         "id": "SDSPI_MOSI",
                         "name": "SDSPI_MOSI",
-                        "range": [
-                            0,
-                            48
-                        ],
+                        "range": null,
                         "title": "MOSI GPIO number",
                         "type": "int"
                     },
@@ -6141,10 +6138,7 @@
                         "help": "GPIO number (IOxx) to SPI MISO.",
                         "id": "SDSPI_MISO",
                         "name": "SDSPI_MISO",
-                        "range": [
-                            0,
-                            48
-                        ],
+                        "range": null,
                         "title": "MISO GPIO number",
                         "type": "int"
                     },
@@ -6154,10 +6148,7 @@
                         "help": "GPIO number (IOxx) to SPI SCLK.",
                         "id": "SDSPI_CLK",
                         "name": "SDSPI_CLK",
-                        "range": [
-                            0,
-                            48
-                        ],
+                        "range": null,
                         "title": "CLK GPIO number",
                         "type": "int"
                     },
@@ -6167,10 +6158,7 @@
                         "help": "GPIO number (IOxx) to SPI CS.",
                         "id": "SDSPI_CS",
                         "name": "SDSPI_CS",
-                        "range": [
-                            0,
-                            48
-                        ],
+                        "range": null,
                         "title": "CS GPIO number",
                         "type": "int"
                     },
@@ -6180,10 +6168,7 @@
                         "help": "GPIO number (IOxx) to SPI POWER.\nWhen it is -1, the POWER isn't performed.",
                         "id": "SDSPI_POWER",
                         "name": "SDSPI_POWER",
-                        "range": [
-                            -1,
-                            48
-                        ],
+                        "range": null,
                         "title": "POWER GPIO number",
                         "type": "int"
                     }

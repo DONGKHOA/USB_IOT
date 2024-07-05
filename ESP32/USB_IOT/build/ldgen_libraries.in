@@ -29,8 +29,8 @@ $<TARGET_FILE:__idf_sdmmc>
 $<TARGET_FILE:__idf_vfs>
 $<TARGET_FILE:__idf_fatfs>
 $<TARGET_FILE:__idf_console>
-$<TARGET_FILE:__idf_FTP>
 $<TARGET_FILE:__idf_SD_Card>
+$<TARGET_FILE:__idf_FTP>
 $<TARGET_FILE:__idf_lwip>
 $<TARGET_FILE:__idf_esp_event>
 $<TARGET_FILE:__idf_nvs_flash>

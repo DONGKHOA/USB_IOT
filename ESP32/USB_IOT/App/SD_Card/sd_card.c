@@ -4,10 +4,6 @@
 
 #include "sd_card.h"
 
-#include "driver/sdspi_host.h"
-#include "driver/gpio.h"
-
-#include "sdmmc_cmd.h"
 #include "esp_vfs_fat.h"
 #include "esp_log.h"
 
@@ -15,7 +11,7 @@
  *      DEFINES
  *********************/
 
-#define SD_CARD_TAG "[sd_card]"
+const char *MOUNT_POINT = "/data";
 
 esp_err_t mountSDCARD(char *mount_point, sdmmc_card_t *card)
 {
@@ -27,7 +23,7 @@ esp_err_t mountSDCARD(char *mount_point, sdmmc_card_t *card)
 	esp_vfs_fat_sdmmc_mount_config_t mount_config = {
 		.format_if_mount_failed = true,
 		.max_files = 4, // maximum number of files which can be open at the same time
-		.allocation_unit_size = 16 * 1024};
+		.allocation_unit_size = 4096};
 
 	// Use settings defined above to initialize SD card and mount FAT filesystem.
 	// Note: esp_vfs_fat_sdmmc/sdspi_mount is all-in-one convenience functions.
@@ -60,28 +56,28 @@ esp_err_t mountSDCARD(char *mount_point, sdmmc_card_t *card)
 	slot_config.gpio_cs = GPIO_NUM_14;
 	slot_config.host_id = host.slot;
 
-	// ret = esp_vfs_fat_sdspi_mount(mount_point, &host, &slot_config, &mount_config, &card);
-	// ESP_LOGI(SD_CARD_TAG, "esp_vfs_fat_sdspi_mount=%d", ret);
+	ret = esp_vfs_fat_sdspi_mount(mount_point, &host, &slot_config, &mount_config, &card);
+	ESP_LOGI(SD_CARD_TAG, "esp_vfs_fat_sdspi_mount=%d", ret);
 
-	// if (ret != ESP_OK)
-	// {
-	// 	if (ret == ESP_FAIL)
-	// 	{
-	// 		ESP_LOGE(SD_CARD_TAG, "Failed to mount filesystem. "
-	// 					  "If you want the card to be formatted, set format_if_mount_failed = true.");
-	// 	}
-	// 	else
-	// 	{
-	// 		ESP_LOGE(SD_CARD_TAG, "Failed to initialize the card (%s). "
-	// 					  "Make sure SD card lines have pull-up resistors in place.",
-	// 				 esp_err_to_name(ret));
-	// 	}
+	if (ret != ESP_OK)
+	{
+		if (ret == ESP_FAIL)
+		{
+			ESP_LOGE(SD_CARD_TAG, "Failed to mount filesystem. "
+						  "If you want the card to be formatted, set format_if_mount_failed = true.");
+		}
+		else
+		{
+			ESP_LOGE(SD_CARD_TAG, "Failed to initialize the card (%s). "
+						  "Make sure SD card lines have pull-up resistors in place.",
+					 esp_err_to_name(ret));
+		}
 
-	// 	return ret;
-	// }
+		return ret;
+	}
 
-	// // Card has been initialized, print its properties
-	// sdmmc_card_print_info(stdout, card);
-	// ESP_LOGI(SD_CARD_TAG, "Mounte SD card on %s", mount_point);
+	// Card has been initialized, print its properties
+	sdmmc_card_print_info(stdout, card);
+	ESP_LOGI(SD_CARD_TAG, "Mounte SD card on %s", mount_point);
 	return ret;
 }

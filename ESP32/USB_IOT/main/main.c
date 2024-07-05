@@ -25,6 +25,8 @@
 #include "mdns.h"
 #include "tinyusb.h"
 #include "tusb_msc_storage.h"
+// #include "usb_descriptors.h"
+#include "tusb.h"
 
 #include <sys/unistd.h>
 #include <sys/stat.h>
@@ -54,8 +56,6 @@
 
 #define TUSB_DESC_TOTAL_LEN (TUD_CONFIG_DESC_LEN + TUD_MSC_DESC_LEN)
 
-#define BASE_PATH "/data" // base path to mount the partition
-
 enum {
     ITF_NUM_MSC = 0,
     ITF_NUM_TOTAL
@@ -82,8 +82,6 @@ extern char ftp_pass[FTP_USER_PASS_LEN_MAX + 1];
  ***********************************/
 
 static EventGroupHandle_t xEventTask;
-
-static char *MOUNT_POINT = "/data";
 
 static volatile uint8_t ssid[32] = "ptn209b3";
 static volatile uint8_t pass[32] = "ptn209b3@";
@@ -142,19 +140,19 @@ static void storage_mount_changed_cb(tinyusb_msc_event_t *event)
 static void _mount(void)
 {
     ESP_LOGI(MAIN_TAG, "Mount storage...");
-    ESP_ERROR_CHECK(tinyusb_msc_storage_mount(BASE_PATH));
+    // ESP_ERROR_CHECK(tinyusb_msc_storage_mount(MOUNT_POINT));
 
     // List all the files in this directory
     ESP_LOGI(MAIN_TAG, "\nls command output:");
     struct dirent *d;
-    DIR *dh = opendir(BASE_PATH);
+    DIR *dh = opendir(MOUNT_POINT);
     if (!dh) {
         if (errno == ENOENT) {
             //If the directory is not found
-            ESP_LOGE(MAIN_TAG, "Directory doesn't exist %s", BASE_PATH);
+            ESP_LOGE(MAIN_TAG, "Directory doesn't exist %s", MOUNT_POINT);
         } else {
             //If the directory is not readable then throw error and exit
-            ESP_LOGE(MAIN_TAG, "Unable to read directory %s", BASE_PATH);
+            ESP_LOGE(MAIN_TAG, "Unable to read directory %s", MOUNT_POINT);
         }
         return;
     }
@@ -252,20 +250,21 @@ void app_main(void)
 
 	// Mount FAT File System on SDCARD
 	sdmmc_card_t card;
-
-    const tinyusb_msc_sdmmc_config_t config_sdmmc = {
-        .card = &card,
-        .callback_mount_changed = storage_mount_changed_cb,  /* First way to register the callback. This is while initializing the storage. */
-        .mount_config.max_files = 5,
-    };
-
-    ESP_ERROR_CHECK(tinyusb_msc_storage_init_sdmmc(&config_sdmmc));
-    ESP_ERROR_CHECK(tinyusb_msc_register_callback(TINYUSB_MSC_EVENT_MOUNT_CHANGED, storage_mount_changed_cb)); /* Other way to register the callback i.e. registering using separate API. If the callback had been already registered, it will be overwritten. */
-	if (ret != ESP_OK) {
-		while(1) { vTaskDelay(1); }
-	};
-	ret = mountSDCARD(MOUNT_POINT, &card);
 	_mount();
+	ret = mountSDCARD((char *)MOUNT_POINT, &card);
+
+	const tinyusb_msc_sdmmc_config_t config_sdmmc = 
+	{
+		.card = &card,
+		.mount_config = 
+		{
+			.format_if_mount_failed = true,
+			.max_files = 5, // maximum number of files which can be open at the same time
+			.allocation_unit_size = 4096
+		}
+	};
+
+	tinyusb_msc_storage_init_sdmmc(&config_sdmmc); 
 
     ESP_LOGI("[usb]", "USB MSC initialization");
     const tinyusb_config_t tusb_cfg = {
@@ -276,6 +275,8 @@ void app_main(void)
         .configuration_descriptor = desc_configuration,
     };
     ESP_ERROR_CHECK(tinyusb_driver_install(&tusb_cfg));
+
+
     ESP_LOGI("[usb]", "USB MSC initialization DONE");
 
 	xEventTask = xEventGroupCreate();

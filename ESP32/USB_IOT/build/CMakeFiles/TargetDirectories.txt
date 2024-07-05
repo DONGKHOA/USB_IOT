@@ -353,13 +353,6 @@ D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/console/CMakeFiles/list_install_component
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/console/CMakeFiles/install.dir
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/console/CMakeFiles/install/local.dir
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/console/CMakeFiles/install/strip.dir
-D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/__idf_FTP.dir
-D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/edit_cache.dir
-D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/rebuild_cache.dir
-D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/list_install_components.dir
-D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/install.dir
-D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/install/local.dir
-D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/install/strip.dir
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/SD_Card/CMakeFiles/__idf_SD_Card.dir
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/SD_Card/CMakeFiles/edit_cache.dir
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/SD_Card/CMakeFiles/rebuild_cache.dir
@@ -367,6 +360,13 @@ D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/SD_Card/CMakeFiles/list_install_component
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/SD_Card/CMakeFiles/install.dir
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/SD_Card/CMakeFiles/install/local.dir
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/SD_Card/CMakeFiles/install/strip.dir
+D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/__idf_FTP.dir
+D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/edit_cache.dir
+D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/rebuild_cache.dir
+D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/list_install_components.dir
+D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/install.dir
+D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/install/local.dir
+D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/CMakeFiles/install/strip.dir
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/lwip/CMakeFiles/edit_cache.dir
 D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/lwip/CMakeFiles/rebuild_cache.dir

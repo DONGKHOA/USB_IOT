@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "USB_IOT",
-    "project_version":    "c2266f0-dirty",
+    "project_version":    "a4b7cd9-dirty",
     "project_path":       "D:/USB_IOT/ESP32/USB_IOT",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.2.1",
     "build_dir":          "D:/USB_IOT/ESP32/USB_IOT/build",
@@ -22,7 +22,7 @@
     "c_compiler":         "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc.exe",
     "config_environment" : {
         "COMPONENT_KCONFIGS" : "C:/Espressif/frameworks/esp-idf-v5.2.1/components/driver/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/efuse/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_coex/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_common/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_event/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_hw_support/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_netif/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_partition/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_phy/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_pm/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_ringbuf/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_system/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_timer/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_wifi/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/fatfs/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/freertos/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/hal/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/heap/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/log/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/lwip/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/mbedtls/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/newlib/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/nvs_flash/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/pthread/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/soc/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/spi_flash/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/usb/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/vfs/Kconfig;C:/Espressif/frameworks/esp-idf-v5.2.1/components/wear_levelling/Kconfig;D:/USB_IOT/ESP32/USB_IOT/managed_components/espressif__mdns/Kconfig;D:/USB_IOT/ESP32/USB_IOT/managed_components/espressif__esp_tinyusb/Kconfig",
-        "COMPONENT_KCONFIGS_PROJBUILD" : "C:/Espressif/frameworks/esp-idf-v5.2.1/components/bootloader/Kconfig.projbuild;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_app_format/Kconfig.projbuild;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_rom/Kconfig.projbuild;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esptool_py/Kconfig.projbuild;C:/Espressif/frameworks/esp-idf-v5.2.1/components/partition_table/Kconfig.projbuild;D:/USB_IOT/ESP32/USB_IOT/main/Kconfig.projbuild"
+        "COMPONENT_KCONFIGS_PROJBUILD" : "C:/Espressif/frameworks/esp-idf-v5.2.1/components/bootloader/Kconfig.projbuild;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_app_format/Kconfig.projbuild;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esp_rom/Kconfig.projbuild;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esptool_py/Kconfig.projbuild;C:/Espressif/frameworks/esp-idf-v5.2.1/components/partition_table/Kconfig.projbuild"
     },
     "common_component_reqs": [ "cxx", "newlib", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "xtensa" ],
     "build_components" : [ "FTP", "SD_Card", "app_update", "bootloader", "bootloader_support", "console", "cxx", "driver", "efuse", "esp_app_format", "esp_bootloader_format", "esp_coex", "esp_common", "esp_event", "esp_hw_support", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_ringbuf", "esp_rom", "esp_system", "esp_timer", "esp_wifi", "espressif__esp_tinyusb", "espressif__mdns", "espressif__tinyusb", "esptool_py", "fatfs", "freertos", "hal", "heap", "log", "lwip", "main", "mbedtls", "newlib", "nvs", "nvs_flash", "partition_table", "pthread", "sdmmc", "soc", "spi_flash", "usb", "vfs", "wear_levelling", "wifi", "wpa_supplicant", "xtensa", "" ],
@@ -36,7 +36,7 @@
             "type": "LIBRARY",
             "lib": "__idf_FTP",
             "reqs": [],
-            "priv_reqs": [ "freertos" ],
+            "priv_reqs": [ "freertos", "SD_Card" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/FTP/libFTP.a",
@@ -50,8 +50,8 @@
             "dir": "D:/USB_IOT/ESP32/USB_IOT/App/SD_Card",
             "type": "LIBRARY",
             "lib": "__idf_SD_Card",
-            "reqs": [],
-            "priv_reqs": [ "driver", "sdmmc", "fatfs" ],
+            "reqs": [ "driver", "sdmmc", "fatfs" ],
+            "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "D:/USB_IOT/ESP32/USB_IOT/build/esp-idf/SD_Card/libSD_Card.a",
@@ -1765,7 +1765,7 @@
             "dir": "D:/USB_IOT/ESP32/USB_IOT/App/FTP",
             "lib": "__idf_FTP",
             "reqs": [],
-            "priv_reqs": [ "freertos" ],
+            "priv_reqs": [ "freertos", "SD_Card" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "." ]
@@ -1776,8 +1776,8 @@
             "prefix": "idf",
             "dir": "D:/USB_IOT/ESP32/USB_IOT/App/SD_Card",
             "lib": "__idf_SD_Card",
-            "reqs": [],
-            "priv_reqs": [ "driver", "sdmmc", "fatfs" ],
+            "reqs": [ "driver", "sdmmc", "fatfs" ],
+            "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "." ]
